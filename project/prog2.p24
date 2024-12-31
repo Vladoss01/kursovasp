@@ -1,0 +1,62 @@
+$$Prog2
+Mainprogram 
+Start
+Data Integer16 _aaaaaa,_bbbbbb,_cccccc;
+Write("Read _aaaaaa: ");
+Read(_aaaaaa);
+Write("Read _bbbbbb: ");
+Read(_bbbbbb);
+Write("Read _cccccc: ");
+Read(_cccccc);
+If(_aaaaaa Et _bbbbbb)
+Start
+	If(_aaaaaa Et _cccccc)
+	Start
+		Goto _avalue;		
+	End	
+	Else
+	Start
+		Write(_cccccc);
+		Goto _outoif;
+		_avalue:		
+		Write(_aaaaaa);
+		Goto _outoif;
+	End
+End	
+	If(_bbbbbb Lt _cccccc)
+	Start
+		Write(_cccccc);
+	End	
+	Else
+	Start
+		Write(_bbbbbb);
+	End
+_outoif:	
+Write("\n");
+If((_aaaaaa = _bbbbbb) & (_aaaaaa = _cccccc) & (_bbbbbb = _cccccc))
+Start
+	Write(1);
+End	
+Else
+Start
+	Write(0);
+End
+Write("\n");
+If((_aaaaaa Lt 0) | (_bbbbbb Lt 0) | (_cccccc Lt 0))
+Start
+	Write(-1);
+End	
+Else
+Start
+	Write(0);
+End
+Write("\n");
+If(!(_aaaaaa Lt (_bbbbbb ++ _cccccc)))
+Start
+	Write(10);
+End	
+Else
+Start
+	Write(0);
+End
+End

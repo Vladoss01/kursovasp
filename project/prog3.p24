@@ -1,0 +1,50 @@
+$$Prog3
+Mainprogram 
+Start
+Data Integer16 _aaaaaa,_aaaaa2,_bbbbbb,_xxxxxx,_ccccc1,_ccccc2;
+Write("Read _aaaaaa: ");
+Read(_aaaaaa);
+Write("Read _bbbbbb: ");
+Read(_bbbbbb);
+Write("For To do");
+For _aaaaa2<-_aaaaaa To _bbbbbb Do
+Start
+	Write("\n");
+	Write(_aaaaa2 ** _aaaaa2);
+End
+Write("\nFor Downto do");
+For _aaaaa2<-_bbbbbb Downto _aaaaaa Do
+Start
+	Write("\n");
+	Write(_aaaaa2 ** _aaaaa2);
+End
+
+Write("\nWhile _aaaaaa * _bbbbbb: ");
+_xxxxxx<-0;
+_ccccc1<-0;
+While(_ccccc1 Lt _aaaaaa) 
+Start
+	_ccccc2<-0;
+	While (_ccccc2 Lt _bbbbbb)
+	Start	
+		_xxxxxx<-_xxxxxx ++ 1;
+		_ccccc2<-_ccccc2 ++ 1;
+	End While
+_ccccc1<-_ccccc1 ++ 1;	
+End While
+Write(_xxxxxx);
+
+Write("\nRepeat Until _aaaaaa * _bbbbbb: ");
+_xxxxxx<-0;
+_ccccc1<-1;
+Repeat
+  _ccccc2<-1;
+  Repeat
+    _xxxxxx<-_xxxxxx++1;
+    _ccccc2<-_ccccc2++1;
+  Until(!(_ccccc2 Et _bbbbbb))
+  _ccccc1<-_ccccc1++1;
+Until(!(_ccccc1 Et _aaaaaa))
+Write(_xxxxxx);
+
+End

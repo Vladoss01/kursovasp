@@ -1,0 +1,25 @@
+$$Prog1
+Mainprogram 
+Start
+Data Integer16 _aaaaaa,_bbbbbb,_xxxxxx,_yyyyyy;
+Write("Read _aaaaaa: ");
+Read(_aaaaaa);
+Write("Read _bbbbbb: ");
+Read(_bbbbbb);
+Write("_aaaaaa + _bbbbbb: ");
+Write(_aaaaaa ++ _bbbbbb);
+Write("\n_Aaaaaaaa - _bbbbbb: ");
+Write(_aaaaaa -- _bbbbbb);
+Write("\n_Aaaaaaaa * _bbbbbb: ");
+Write(_aaaaaa ** _bbbbbb);
+Write("\n_Aaaaaaaa / _bbbbbb: ");
+Write(_aaaaaa Div _bbbbbb);
+Write("\n_Aaaaaaaa % _bbbbbb: ");
+Write(_aaaaaa Mod _bbbbbb);
+_xxxxxx<-(_aaaaaa -- _bbbbbb) ** 10 ++ (_aaaaaa ++ _bbbbbb) Div 10;
+_yyyyyy<-_xxxxxx ++ (_xxxxxx Mod 10);
+Write("\n_xxxxxxx = (_aaaaaa - _bbbbbb) * 10 + (_aaaaaa + _bbbbbb) / 10\n");
+Write(_xxxxxx);
+Write("\n_yyyyyyy = _xxxxxx + (_xxxxxx % 10)\n");
+Write(_yyyyyy);
+End
